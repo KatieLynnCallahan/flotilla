@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, {{ user.username }}!</h1>
+    <h1>{% block title %} Businesses {% endblock %}</h1>
+    {% for bizs in biz %}
+        <div class='businesses'>
+            <b><h3><p>{{ bizs['business_name'] }}</p></h3></b>
+            <p>{{ bizs.user.username }}</p>
+            <p><u>Industry:</u> {{ bizs['industry'] }}</p>
+            <p>{{ bizs['address_city'] }}, {{ bizs['address_state'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
