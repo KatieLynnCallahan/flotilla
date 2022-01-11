@@ -3,3 +3,4 @@ Lib/
 migrations/
 Scripts/
 Include/
+flotilla.db/
